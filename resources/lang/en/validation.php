@@ -13,6 +13,7 @@ return [
     |
     */
 
+   
     'accepted' => 'The :attribute must be accepted.',
     'active_url' => 'The :attribute is not a valid URL.',
     'after' => 'The :attribute must be a date after :date.',
@@ -144,6 +145,36 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+        'name'                  => 'Name',
+        'username'              => 'User Name',
+        'email'                 => 'Email',
+        'first_name'            => 'First Name',
+        'last_name'             => 'Last Name',
+        'password'              => 'Password',
+        'password_confirmation' => 'Password Confirmation',
+        'city'                  => 'City',
+        'country'               => 'Country',
+        'address'               => 'Address',
+        'phone'                 => 'Phone',
+        'mobile'                => 'Mobile',
+        'age'                   => 'Age',
+        'sex'                   => 'Sex',
+        'gender'                => 'Gender',
+        'day'                   => 'Day',
+        'month'                 => 'Month',
+        'year'                  => 'Year',
+        'hour'                  => 'Hour',
+        'minute'                => 'Minute',
+        'second'                => 'Second',
+        'title'                 => 'Title',
+        'content'               => 'Content',
+        'description'           => 'Descrption',
+        'excerpt'               => 'Excerpt',
+        'date'                  => 'Date',
+        'time'                  => 'Time',
+        'available'             => 'Available',
+        'size'                  => 'Size',
+    ],
 
 ];

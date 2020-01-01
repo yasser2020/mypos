@@ -3,13 +3,17 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>AdminLTE 2 | Blank Page</title>
+    <title>POS Application</title>
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 
     {{--<!-- Bootstrap 3.3.7 -->--}}
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/ionicons.min.css') }}">
     <link rel="stylesheet" href="{{ asset('dashboard_files/css/skin-blue.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('dashboard_files/css/custom-css.css') }}">
+
+    
+
 
     @if (app()->getLocale() == 'ar')
         <link rel="stylesheet" href="{{ asset('dashboard_files/css/font-awesome-rtl.min.css') }}">
@@ -89,10 +93,10 @@
     <header class="main-header">
 
         {{--<!-- Logo -->--}}
-        <a href="{{ asset('dashboard') }}/index2.html" class="logo">
+         <a href="{{route('dashboard.index')}}" class="logo">
             {{--<!-- mini logo for sidebar mini 50x50 pixels -->--}}
-            <span class="logo-mini"><b>A</b>LT</span>
-            <span class="logo-lg"><b>Admin</b>LTE</span>
+            <span class="logo-mini"><b>P</b>OS</span>
+            <span class="logo-lg"><b>POS </b>Application</span>
         </a>
 
         <nav class="navbar navbar-static-top">
@@ -122,6 +126,7 @@
                                         <a href="#">
                                             <div class="pull-left">
                                                 <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="img-circle" alt="User Image">
+                                                
                                             </div>
                                             <h4>
                                                 Support Team
@@ -187,8 +192,9 @@
                     <li class="dropdown user user-menu">
 
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                
                             <img src="{{ asset('dashboard_files/img/user2-160x160.jpg') }}" class="user-image" alt="User Image">
-                            {{-- <span class="hidden-xs">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</span> --}}
+                            <span class="hidden-xs">{{ auth()->user()->first_name }} {{ auth()->user()->last_name }}</span>
                         </a>
                         <ul class="dropdown-menu">
 
@@ -226,16 +232,16 @@
     
     @yield('content')
 
-    {{-- @include('partials._session') --}}
+    @include('partials._session')
 
-    <footer class="main-footer">
+    {{-- <footer class="main-footer">
         <div class="pull-right hidden-xs">
-            <b>Version</b> 2.4.0
+            <b>Version</b> 1.0.0
         </div>
         <strong>Copyright &copy; 2014-2016
             <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
         reserved.
-    </footer>
+    </footer> --}}
 
 </div><!-- end of wrapper -->
 
@@ -280,6 +286,7 @@
         });
 
         //delete
+        
         $('.delete').click(function (e) {
 
             var that = $(this)
@@ -304,21 +311,22 @@
             n.show();
 
         });//end of delete
-
-        // // image preview
-        // $(".image").change(function () {
-        //
-        //     if (this.files && this.files[0]) {
-        //         var reader = new FileReader();
-        //
-        //         reader.onload = function (e) {
-        //             $('.image-preview').attr('src', e.target.result);
-        //         }
-        //
-        //         reader.readAsDataURL(this.files[0]);
-        //     }
-        //
-        // });
+        
+        
+        // image preview
+        $(".image").change(function () {
+        
+            if (this.files && this.files[0]) {
+                var reader = new FileReader();
+        
+                reader.onload = function (e) {
+                    $('.image-preview').attr('src', e.target.result);
+                }
+        
+                reader.readAsDataURL(this.files[0]);
+            }
+        
+        });
 
         CKEDITOR.config.language =  "{{ app()->getLocale() }}";
 
