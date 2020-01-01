@@ -39,6 +39,9 @@ return [
  'profit_percent'=>'الربح',
  'products_count'=>'عدد المنتجات',
  'related_products'=>'المنتجات المرتبطة',
+ 'clients'=>'العملاء',
+ 'phone'=>'رقم التليفون',
+ 'address'=>'العنوان',
  'ar'=>[
     'name'=>'الاسم بالغة العربية',
     'description'=>'الوصف باللغة العربية',

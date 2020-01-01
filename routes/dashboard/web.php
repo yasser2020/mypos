@@ -16,7 +16,8 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function()
                 Route::resource('categories','CategoryController')->except('show');
                 //product Route
                 Route::resource('products','ProductController')->except('show');
-              
+               //client Route
+               Route::resource('clients','ClientController')->except('show');
        });
 
 	
