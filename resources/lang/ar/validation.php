@@ -176,7 +176,7 @@ return [
         'available'             => 'مُتاح',
         'size'                  => 'الحجم',
         'image'                  => 'صورة',
-        'permission'=>'الصلاحيات',
+        'permissions'=>'الصلاحيات',
         'category_id'=>'القسم ',
         'purchase_price'=>'سعر الشراء',
         'sale_price'=>'سعر البيع',

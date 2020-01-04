@@ -23,7 +23,7 @@
                          <div class="col-md-4">
                                <button type="submit" class="btn btn-primary btn-sm"><i class="fa fa-search"></i> @lang('site.search')</button>
                                @if(auth()->user()->hasPermission('create_users'))
-                               <a href="{{route('dashboard.categories.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> @lang('site.add')</a>
+                               <a href="{{route('dashboard.users.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> @lang('site.add')</a>
                                 @else 
                                 <a href="#" class="btn btn-primary btn-sm disabled"><i class="fa fa-plus"></i> @lang('site.add')</a>
 

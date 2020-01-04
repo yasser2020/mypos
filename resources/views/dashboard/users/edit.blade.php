@@ -18,7 +18,7 @@
 
                 <h3 class="box-title">@lang('site.edit')</h3>
                 <div class="box-body">
-                    {{-- @include('partials._errors') --}}
+                     @include('partials._errors') 
                 <form action="{{route('dashboard.users.update',$user->id)}}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
@@ -69,7 +69,7 @@
                              <label>@lang('site.permissions')</label>
                              <div class="nav-tabs-custom">
                                  @php
-                                     $models=['users','categories','products'];
+                                     $models=['users','categories','products','clients','orders'];
                                      $maps=['create','read','update','delete'];
 
                                  @endphp

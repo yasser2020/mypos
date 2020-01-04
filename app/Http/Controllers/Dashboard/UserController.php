@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 use Intervention\Image\ImageManagerStatic as Image;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
 use App\User;
@@ -51,7 +52,7 @@ class UserController extends Controller
                'last_name'=>'required',
                'email'=>'required|unique:users',
                'image'=>'image',
-               'permission'=>'required',
+               'permissions'=>'required',
                'password'=>'required|confirmed',
                'password_confirmation'=>'required'
         ]);
@@ -88,7 +89,7 @@ class UserController extends Controller
              'last_name'=>'required',
              'email'=>['required',Rule::unique('users')->ignore($user->id)],
                'image'=>'image',
-               'permission'=>'required'
+               'permissions'=>'required'
              
       ]);
 

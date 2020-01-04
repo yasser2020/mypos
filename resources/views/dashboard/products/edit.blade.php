@@ -79,7 +79,7 @@
 
                       <div class="form-group">
                         <label for="purchase_price">@lang('site.purchase_price')</label>
-                    <input type="number" name="purchase_price"  value="{{$product->purchase_price}}" class="form-control  {{$errors->has('purchase_price')? 'is-invalid' :''}}">
+                    <input type="double" name="purchase_price"  value="{{$product->purchase_price}}" class="form-control  {{$errors->has('purchase_price')? 'is-invalid' :''}}">
                     @if($errors->has('purchase_price'))
                     <div class="invalid-feedback">
                         <strong>{{$errors->first('purchase_price')}}</strong>
@@ -88,7 +88,7 @@
 
                     <div class="form-group">
                         <label for="sale_price">@lang('site.sale_price')</label>
-                    <input type="number" name="sale_price"  value="{{$product->sale_price}}"  class="form-control {{$errors->has('sale_price')? 'is-invalid' :''}}">
+                    <input type="double" name="sale_price"  value="{{$product->sale_price}}"  class="form-control {{$errors->has('sale_price')? 'is-invalid' :''}}">
                     @if($errors->has('sale_price'))
                     <div class="invalid-feedback">
                         <strong>{{$errors->first('sale_price')}}</strong>
