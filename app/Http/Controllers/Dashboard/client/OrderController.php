@@ -22,7 +22,7 @@ class OrderController extends Controller
 
     public function store(Request $request,Client $client)
     {
-        # code...
+        dd($request->all());
     }
     public function edit(Client $client,Order $order)
     {
